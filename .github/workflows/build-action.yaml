@@ -1,0 +1,38 @@
+name: Build Action
+
+on:
+    push:
+        branches: [main]
+
+jobs:
+    build_action:
+        name: Build Action
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v3
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 16
+
+            - name: Install pnpm
+              uses: pnpm/action-setup@v2
+              with:
+                  version: 7.1.0
+
+            - name: Installing dependencies
+              run: pnpm install
+
+            - name: Create build folder
+              run: pnpm build
+
+            - name: Commit build folder
+              uses: EndBug/add-and-commit@v9
+              with:
+                  add: 'build --force'
+                  author_name: Exlint
+                  author_email: dev@exlint.io
+                  message: 'chore: 🤖 Update build folder'

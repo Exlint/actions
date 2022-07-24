@@ -1,0 +1,18 @@
+{
+	"editor.formatOnSave": true,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"typescript.tsdk": "node_modules/typescript/lib",
+	"search.exclude": {
+		"**/node_modules": true
+	},
+	"files.associations": {
+		"commit-msg": "shellscript"
+	},
+	"material-icon-theme.files.associations": {
+		".inflintignore": "crystal",
+		"inflint.config.ts": "crystal",
+		"czvinyl.config.ts": "ocaml",
+		".depcheckrc.json": "parcel",
+		".cz.json": "jinja"
+	}
+}

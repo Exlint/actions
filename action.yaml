@@ -1,0 +1,16 @@
+name: 'Exlint Action'
+author: 'Exlint'
+description: 'Runs `exlint` in your repository.'
+branding:
+    icon: 'code'
+    color: 'purple'
+inputs:
+    token:
+        description: 'The CLI token to use to authenticate with your account'
+        required: true
+    groupId:
+        description: 'The group ID to use with Exlint'
+        required: true
+runs:
+    using: 'node16'
+    main: './build/index.js'

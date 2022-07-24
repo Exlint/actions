@@ -1,0 +1,79 @@
+{
+	"name": "exlint-action",
+	"version": "1.0.0",
+	"description": "Runs and uses `exlint` in your repository.",
+	"main": "./build/index.js",
+	"private": true,
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Exlint/github-action.git"
+	},
+	"keywords": [
+		"exlint",
+		"lint"
+	],
+	"author": {
+		"name": "Exlint",
+		"email": "dev@exlint.io",
+		"url": "https://www.exlint.io"
+	},
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/Exlint/github-action/issues"
+	},
+	"homepage": "https://github.com/Exlint/github-action",
+	"scripts": {
+		"preinstall": "npx only-allow pnpm",
+		"husky:install": "husky install",
+		"git:config": "git config --local include.path ../.gitconfig",
+		"setdev": "run-p husky:install git:config",
+		"onboarding": "node ./scripts/onboarding.cjs",
+		"prepare": "is-ci || run-s setdev onboarding",
+		"dist": "webpack -c webpack.config.ts",
+		"bundle": "ncc build ./dist/index.js -o ./build",
+		"build": "run-s dist bundle",
+		"lint": "eslint -c ./.eslintrc.cjs \"**/*.{ts,js.cjs}\"",
+		"type-check": "tsc --project ./tsconfig.json",
+		"inflint": "inflint -c ./inflint.config.ts",
+		"depcheck": "depcheck --config ./.depcheckrc.json",
+		"prettier": "prettier --check **/*.{ts,js,cjs,json,yaml}"
+	},
+	"dependencies": {
+		"@actions/core": "^1.8.2",
+		"@actions/exec": "1.1.1",
+		"@actions/http-client": "2.0.1",
+		"chalk": "4.1.2"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "16.3.0",
+		"@exlint.io/inflint": "1.2.9",
+		"@types/node": "18.0.6",
+		"@types/webpack-node-externals": "2.5.3",
+		"@typescript-eslint/eslint-plugin": "5.30.7",
+		"@typescript-eslint/parser": "5.30.7",
+		"@vercel/ncc": "0.34.0",
+		"commitizen": "4.2.5",
+		"cz-vinyl": "1.3.2",
+		"depcheck": "1.4.3",
+		"eslint": "8.20.0",
+		"eslint-config-prettier": "8.5.0",
+		"eslint-plugin-deprecation": "1.3.2",
+		"eslint-plugin-import": "2.26.0",
+		"eslint-plugin-node": "11.1.0",
+		"eslint-plugin-unused-imports": "2.0.0",
+		"figlet": "^1.5.2",
+		"husky": "^8.0.1",
+		"is-ci": "3.0.1",
+		"lint-staged": "12.5.0",
+		"npm-run-all": "4.1.5",
+		"prettier": "2.7.1",
+		"rimraf": "3.0.2",
+		"ts-loader": "9.3.1",
+		"ts-node": "10.9.1",
+		"typescript": "4.7.4",
+		"webpack": "5.73.0",
+		"webpack-cli": "4.10.0",
+		"webpack-node-externals": "3.0.0",
+		"webpack-shell-plugin-next": "2.2.2"
+	}
+}
