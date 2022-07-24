@@ -42,7 +42,8 @@
 		"@actions/core": "^1.8.2",
 		"@actions/exec": "1.1.1",
 		"@actions/http-client": "2.0.1",
-		"chalk": "4.1.2"
+		"chalk": "4.1.2",
+		"netrc-parser": "3.1.6"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "16.3.0",

@@ -1,18 +1,14 @@
-import fs from 'fs/promises';
-import path from 'path';
-import os from 'os';
-
 import * as core from '@actions/core';
 import exec from '@actions/exec';
 import http from '@actions/http-client';
 import chalk from 'chalk';
+import { Netrc } from 'netrc-parser';
 
 import type { IVerifyCliTokenResponseBody } from './interfaces/responses';
 import { CLI_API_DOMAIN, CLI_API_URL } from './constants/cli-api';
 
 const exlintCliToken = core.getInput('token');
 const exlintGroupId = core.getInput('groupId');
-const netRcFilePath = path.join(os.homedir(), process.platform === 'win32' ? '_netrc' : '.netrc');
 const httpClient = new http.HttpClient('exlint-http-client');
 
 (async () => {
@@ -41,9 +37,21 @@ const httpClient = new http.HttpClient('exlint-http-client');
 		const parsedVerifyCliTokenResponseBody: IVerifyCliTokenResponseBody =
 			JSON.parse(verifyCliTokenResponseBody);
 
-		const netRcAppendContent = `${os.EOL}machine ${CLI_API_DOMAIN} login ${parsedVerifyCliTokenResponseBody.email} password ${exlintCliToken}`;
+		const netrc = new Netrc();
 
-		await fs.appendFile(netRcFilePath, netRcAppendContent);
+		await netrc.load();
+
+		const newMachines = {
+			...netrc.machines,
+			[CLI_API_DOMAIN]: {
+				login: parsedVerifyCliTokenResponseBody.email,
+				password: exlintCliToken,
+			},
+		};
+
+		netrc.machines = newMachines;
+
+		await netrc.save();
 
 		const exlintUseCommandExitCode = await exec.exec('npx', ['@exlint.io/cli', 'use', exlintGroupId]);
 
