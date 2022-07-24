@@ -1,6 +1,6 @@
 module.exports = {
 	branches: ['main'],
-	repositoryUrl: 'git+https://github.com/Exlint/github-action.git',
+	repositoryUrl: 'git+https://github.com/Exlint/actions.git',
 	plugins: [
 		'@semantic-release/commit-analyzer',
 		'@semantic-release/release-notes-generator',
