@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@actions/core': ^1.8.2
+  '@actions/core': 1.9.0
   '@actions/exec': 1.1.1
   '@actions/http-client': 2.0.1
   '@commitlint/cli': 17.0.3
@@ -21,8 +21,8 @@ specifiers:
   eslint-plugin-import: 2.26.0
   eslint-plugin-node: 11.1.0
   eslint-plugin-unused-imports: 2.0.0
-  figlet: ^1.5.2
-  husky: ^8.0.1
+  figlet: 1.5.2
+  husky: 8.0.1
   is-ci: 3.0.1
   lint-staged: 13.0.3
   netrc-parser: 3.1.6
