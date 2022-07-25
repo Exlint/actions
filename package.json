@@ -39,14 +39,14 @@
 		"prettier": "prettier --check **/*.{ts,js,cjs,json,yaml}"
 	},
 	"dependencies": {
-		"@actions/core": "^1.8.2",
+		"@actions/core": "1.9.0",
 		"@actions/exec": "1.1.1",
 		"@actions/http-client": "2.0.1",
 		"chalk": "4.1.2",
 		"netrc-parser": "3.1.6"
 	},
 	"devDependencies": {
-		"@commitlint/cli": "16.3.0",
+		"@commitlint/cli": "17.0.3",
 		"@exlint.io/inflint": "1.2.9",
 		"@types/node": "18.0.6",
 		"@types/webpack-node-externals": "2.5.3",
@@ -62,17 +62,17 @@
 		"eslint-plugin-import": "2.26.0",
 		"eslint-plugin-node": "11.1.0",
 		"eslint-plugin-unused-imports": "2.0.0",
-		"figlet": "^1.5.2",
-		"husky": "^8.0.1",
+		"figlet": "1.5.2",
+		"husky": "8.0.1",
 		"is-ci": "3.0.1",
-		"lint-staged": "12.5.0",
+		"lint-staged": "13.0.3",
 		"npm-run-all": "4.1.5",
 		"prettier": "2.7.1",
 		"rimraf": "3.0.2",
 		"ts-loader": "9.3.1",
 		"ts-node": "10.9.1",
 		"typescript": "4.7.4",
-		"webpack": "5.73.0",
+		"webpack": "5.74.0",
 		"webpack-cli": "4.10.0",
 		"webpack-node-externals": "3.0.0",
 		"webpack-shell-plugin-next": "2.2.2"
