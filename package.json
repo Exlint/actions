@@ -30,7 +30,7 @@
 		"onboarding": "node ./scripts/onboarding.cjs",
 		"prepare": "is-ci || run-s setdev onboarding",
 		"dist": "webpack -c webpack.config.ts",
-		"bundle": "ncc build ./dist/index.js -o ./build",
+		"bundle": "ncc build ./dist/index.js -o ./build -m",
 		"build": "run-s dist bundle",
 		"lint": "eslint -c ./.eslintrc.cjs \"**/*.{ts,js.cjs}\"",
 		"type-check": "tsc --project ./tsconfig.json",
