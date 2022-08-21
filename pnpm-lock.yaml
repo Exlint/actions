@@ -13,7 +13,7 @@ specifiers:
   '@vercel/ncc': 0.34.0
   chalk: 4.1.2
   commitizen: 4.2.5
-  cz-vinyl: 1.3.2
+  cz-vinyl: 1.4.0
   depcheck: 1.4.3
   eslint: 8.22.0
   eslint-config-prettier: 8.5.0
@@ -53,7 +53,7 @@ devDependencies:
   '@typescript-eslint/parser': 5.33.1_4rv7y5c6xz3vfxwhbrcxxi73bq
   '@vercel/ncc': 0.34.0
   commitizen: 4.2.5
-  cz-vinyl: 1.3.2_tdn3ypgnfy6bmey2q4hu5jonwi
+  cz-vinyl: 1.4.0_tdn3ypgnfy6bmey2q4hu5jonwi
   depcheck: 1.4.3
   eslint: 8.22.0
   eslint-config-prettier: 8.5.0_eslint@8.22.0
@@ -1482,22 +1482,6 @@ packages:
       through2: 4.0.2
     dev: true
 
-  /cosmiconfig-typescript-loader/1.0.9_tdn3ypgnfy6bmey2q4hu5jonwi:
-    resolution: {integrity: sha512-tRuMRhxN4m1Y8hP9SNYfz7jRwt8lZdWxdjg/ohg5esKmsndJIn4yT96oJVcf5x0eA11taXl+sIp+ielu529k6g==}
-    engines: {node: '>=12', npm: '>=6'}
-    peerDependencies:
-      '@types/node': '*'
-      typescript: '>=3'
-    dependencies:
-      '@types/node': 18.0.6
-      cosmiconfig: 7.0.1
-      ts-node: 10.9.1_tdn3ypgnfy6bmey2q4hu5jonwi
-      typescript: 4.7.4
-    transitivePeerDependencies:
-      - '@swc/core'
-      - '@swc/wasm'
-    dev: true
-
   /cosmiconfig-typescript-loader/2.0.1_tdn3ypgnfy6bmey2q4hu5jonwi:
     resolution: {integrity: sha512-B9s6sX/omXq7I6gC6+YgLmrBFMJhPWew7ty/X5Tuwtd2zOSgWaUdXjkuVwbe3qqcdETo60+1nSVMekq//LIXVA==}
     engines: {node: '>=12', npm: '>=6'}
@@ -1581,12 +1565,16 @@ packages:
       - '@swc/wasm'
     dev: true
 
-  /cz-vinyl/1.3.2_tdn3ypgnfy6bmey2q4hu5jonwi:
-    resolution: {integrity: sha512-BHoKPQ44vkWoxzehYFAHu9A39LR8RMDsTDoLrsUYVdJpMSfImeqWe1T3he8XQlj1yPV3kCaMTk6In5+7vGZcdA==}
+  /cz-vinyl/1.4.0_tdn3ypgnfy6bmey2q4hu5jonwi:
+    resolution: {integrity: sha512-O+xy8C0uV7tpCzEnzipEuqtArkNf/dsAF2NE8AwVYp6gAJNyNC62NLdRZ6FNodsQo/LKGQ7G8OXNRXt5JnJoLw==}
+    peerDependencies:
+      '@types/node': 17.0.33
+      vite: 2.9.9
     dependencies:
+      '@types/node': 18.0.6
       cosmiconfig: 7.0.1
-      cosmiconfig-typescript-loader: 1.0.9_tdn3ypgnfy6bmey2q4hu5jonwi
-      fuse.js: 6.5.3
+      cosmiconfig-typescript-loader: 2.0.1_tdn3ypgnfy6bmey2q4hu5jonwi
+      fuse.js: 6.6.2
       inquirer: 8.2.4
       inquirer-autocomplete-prompt: 2.0.0_inquirer@8.2.4
       inquirer-maxlength-input-prompt: 1.0.2
@@ -1595,7 +1583,6 @@ packages:
     transitivePeerDependencies:
       - '@swc/core'
       - '@swc/wasm'
-      - '@types/node'
       - typescript
     dev: true
 
@@ -2379,8 +2366,8 @@ packages:
     resolution: {integrity: sha512-xckBUXyTIqT97tq2x2AMb+g163b5JFysYk0x4qxNFwbfQkmNZoiRHb6sPzI9/QV33WeuvVYBUIiD4NzNIyqaRQ==}
     dev: true
 
-  /fuse.js/6.5.3:
-    resolution: {integrity: sha512-sA5etGE7yD/pOqivZRBvUBd/NaL2sjAu6QuSaFoe1H2BrJSkH/T/UXAJ8CdXdw7DvY3Hs8CXKYkDWX7RiP5KOg==}
+  /fuse.js/6.6.2:
+    resolution: {integrity: sha512-cJaJkxCCxC8qIIcPBF9yGxY0W/tVZS3uEISDxhYIdtk8OL93pe+6Zj7LjCqVV4dzbqcriOZ+kQ/NE4RXZHsIGA==}
     engines: {node: '>=10'}
     dev: true
 
@@ -4108,7 +4095,7 @@ packages:
     dev: true
 
   /string-template/1.0.0:
-    resolution: {integrity: sha1-np8iM9wA8hhxjsN5oopWc+zKi5Y=}
+    resolution: {integrity: sha512-SLqR3GBUXuoPP5MmYtD7ompvXiG87QjT6lzOszyXjTM86Uu7At7vNnt2xgyTLq5o9T4IxTYFyGxcULqpsmsfdg==}
     dev: true
 
   /string-width/2.1.1:
@@ -4252,7 +4239,7 @@ packages:
     dev: true
 
   /symbol-observable/1.0.1:
-    resolution: {integrity: sha1-g0D8RwLDEi310iKI+IKD9RPT/dQ=}
+    resolution: {integrity: sha512-Kb3PrPYz4HanVF1LVGuAdW6LoVgIwjUYJGzFe7NDrBLCN4lsV/5J0MFurV+ygS4bRVwrCEt2c7MQ1R2a72oJDw==}
     engines: {node: '>=0.10.0'}
     dev: true
 
