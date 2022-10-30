@@ -14,5 +14,6 @@
 		"czvinyl.config.ts": "ocaml",
 		".depcheckrc.json": "parcel",
 		".cz.json": "jinja"
-	}
+	},
+	"task.allowAutomaticTasks": "on"
 }

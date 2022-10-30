@@ -1,5 +1,5 @@
 name: "\U0001F41E Report a problem"
-description: 'Report an issue with cz-viny'
+description: 'Report an issue with Exlint action'
 title: 'Bug: (fill in)'
 labels:
     - bug
@@ -8,7 +8,7 @@ body:
       attributes:
           label: What did you do?
           description: |
-              Please include a *minimal* reproduction case. Otherwise, include source code, configuration file(s), and any other information about how you're using cz-vinyl. You can use Markdown in this field.
+              Please include a *minimal* reproduction case. Otherwise, include source code, configuration file(s), and any other information about how you're using Exlint action. You can use Markdown in this field.
           value: |
               <details>
               <summary>Configuration</summary>
@@ -30,7 +30,7 @@ body:
       attributes:
           label: What actually happened?
           description: |
-              Please copy-paste the actual cz-vinyl output. You can use Markdown in this field.
+              Please copy-paste the actual Exlint action output. You can use Markdown in this field.
       validations:
           required: true
     - type: checkboxes
