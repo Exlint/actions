@@ -11,7 +11,7 @@ jobs:
 
         steps:
             - name: Setup Node environment
-              uses: Exlint/node-environment@v1
+              uses: Exlint/node-environment@v1.0.4
               with:
                   node-version: 18.11.0
                   package-manager: pnpm
