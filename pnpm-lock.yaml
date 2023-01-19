@@ -12,7 +12,7 @@ specifiers:
   '@typescript-eslint/parser': 5.48.2
   '@vercel/ncc': 0.36.0
   chalk: 4.1.2
-  commitizen: 4.2.6
+  commitizen: 4.3.0
   cz-vinyl: 1.6.2
   depcheck: 1.4.3
   eslint: 8.32.0
@@ -52,7 +52,7 @@ devDependencies:
   '@typescript-eslint/eslint-plugin': 5.48.2_caon6io6stgpr7lz2rtbhekxqy
   '@typescript-eslint/parser': 5.48.2_7uibuqfxkfaozanbtbziikiqje
   '@vercel/ncc': 0.36.0
-  commitizen: 4.2.6
+  commitizen: 4.3.0
   cz-vinyl: 1.6.2_awa2wsr5thmg3i7jqycphctjfq
   depcheck: 1.4.3
   eslint: 8.32.0
@@ -325,7 +325,7 @@ packages:
       '@commitlint/types': 17.4.0
       fs-extra: 11.1.0
       git-raw-commits: 2.0.11
-      minimist: 1.2.6
+      minimist: 1.2.7
     dev: true
 
   /@commitlint/resolve-extends/17.4.0:
@@ -1452,8 +1452,8 @@ packages:
     engines: {node: ^12.20.0 || >=14}
     dev: true
 
-  /commitizen/4.2.6:
-    resolution: {integrity: sha512-RyTM+EiD9GO01DJUn9MRRAet3XUHGfoUZoksLfr+1ym1Xt2q5EYJs9Fg2BtKSb5Mo53i0BtMBmWMHQXVlZ/L9w==}
+  /commitizen/4.3.0:
+    resolution: {integrity: sha512-H0iNtClNEhT0fotHvGV3E9tDejDeS04sN1veIebsKYGMuGscFaswRoYJKmT3eW85eIJAs0F28bG2+a/9wCOfPw==}
     engines: {node: '>= 12'}
     hasBin: true
     dependencies:
@@ -1465,10 +1465,10 @@ packages:
       find-root: 1.1.0
       fs-extra: 9.1.0
       glob: 7.2.3
-      inquirer: 8.2.4
+      inquirer: 8.2.5
       is-utf8: 0.2.1
       lodash: 4.17.21
-      minimist: 1.2.6
+      minimist: 1.2.7
       strip-bom: 4.0.0
       strip-json-comments: 3.1.1
     transitivePeerDependencies:
@@ -1592,7 +1592,7 @@ packages:
     engines: {node: '>= 10'}
     dependencies:
       chalk: 2.4.2
-      commitizen: 4.2.6
+      commitizen: 4.3.0
       conventional-commit-types: 3.0.0
       lodash.map: 4.6.0
       longest: 2.0.1
@@ -2773,6 +2773,27 @@ packages:
       wrap-ansi: 7.0.0
     dev: true
 
+  /inquirer/8.2.5:
+    resolution: {integrity: sha512-QAgPDQMEgrDssk1XiwwHoOGYF9BAbUcc1+j+FhEvaOt8/cKRqyLn0U5qA6F74fGhTMGxf92pOvPBeh29jQJDTQ==}
+    engines: {node: '>=12.0.0'}
+    dependencies:
+      ansi-escapes: 4.3.2
+      chalk: 4.1.2
+      cli-cursor: 3.1.0
+      cli-width: 3.0.0
+      external-editor: 3.1.0
+      figures: 3.2.0
+      lodash: 4.17.21
+      mute-stream: 0.0.8
+      ora: 5.4.1
+      run-async: 2.4.1
+      rxjs: 7.5.6
+      string-width: 4.2.3
+      strip-ansi: 6.0.1
+      through: 2.3.8
+      wrap-ansi: 7.0.0
+    dev: true
+
   /internal-slot/1.0.4:
     resolution: {integrity: sha512-tA8URYccNzMo94s5MQZgH8NB/XTa6HsOo0MLfXTKKEnHVVdegzaQoFZ7Jp44bdvLvY2waT5dc+j5ICEswhi7UQ==}
     engines: {node: '>= 0.4'}
@@ -3079,7 +3100,7 @@ packages:
     resolution: {integrity: sha512-aKS4WQjPenRxiQsC93MNfjx+nbF4PAdYzmd/1JIj8HYzqfbu86beTuNgXDzPknWk0n0uARlyewZo4s++ES36Ow==}
     hasBin: true
     dependencies:
-      minimist: 1.2.6
+      minimist: 1.2.7
     dev: true
 
   /json5/2.2.1:
@@ -3399,6 +3420,10 @@ packages:
 
   /minimist/1.2.6:
     resolution: {integrity: sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==}
+    dev: true
+
+  /minimist/1.2.7:
+    resolution: {integrity: sha512-bzfL1YUZsP41gmu/qjrEk0Q6i2ix/cVeAhbCbqH9u3zYutS1cLg00qhrD0M2MVdCcx4Sc0UpP2eBWo9rotpq6g==}
     dev: true
 
   /ms/2.1.2:
@@ -4494,7 +4519,7 @@ packages:
     dependencies:
       '@types/json5': 0.0.29
       json5: 1.0.1
-      minimist: 1.2.6
+      minimist: 1.2.7
       strip-bom: 3.0.0
     dev: true
 
