@@ -100,7 +100,7 @@ const runExlint = () => __awaiter(void 0, void 0, void 0, function* () {
         core.setFailed(chalk_1.default.bold.red('Exlint action failed.'));
         return;
     }
-    core.info(chalk_1.default.bold.green('Exlint action ran successfully!'));
+    core.info(chalk_1.default.bold.green('Exlint action completed successfully!'));
 });
 runExlint();
 
