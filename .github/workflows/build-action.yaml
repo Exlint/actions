@@ -7,8 +7,10 @@ on:
 jobs:
     build_action:
         name: Build Action
-        runs-on: ubuntu-latest
+        permissions:
+            contents: write
 
+        runs-on: ubuntu-latest
         steps:
             - name: Setup Node environment
               uses: Exlint/node-environment@v1.1.0
