@@ -6,7 +6,7 @@
 	"private": true,
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/Exlint/github-action.git"
+		"url": "git+https://github.com/Exlint/actions.git"
 	},
 	"keywords": [
 		"exlint",
@@ -19,9 +19,9 @@
 	},
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/Exlint/github-action/issues"
+		"url": "https://github.com/Exlint/actions/issues"
 	},
-	"homepage": "https://github.com/Exlint/github-action",
+	"homepage": "https://github.com/Exlint/actions",
 	"scripts": {
 		"preinstall": "npx only-allow pnpm",
 		"husky:install": "husky install",
