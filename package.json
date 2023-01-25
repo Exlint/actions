@@ -3,7 +3,6 @@
 	"version": "1.0.0",
 	"description": "Runs and uses `exlint` in your repository.",
 	"main": "./build/index.js",
-	"private": true,
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/Exlint/actions.git"
