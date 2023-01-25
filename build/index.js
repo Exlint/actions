@@ -47,14 +47,14 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const core = __importStar(__nccwpck_require__(8686));
-const exec_1 = __importDefault(__nccwpck_require__(7697));
-const http_client_1 = __importDefault(__nccwpck_require__(8971));
+const exec = __importStar(__nccwpck_require__(7697));
+const http = __importStar(__nccwpck_require__(8971));
 const chalk_1 = __importDefault(__nccwpck_require__(1433));
 const netrc_parser_1 = __nccwpck_require__(816);
 const cli_api_1 = __nccwpck_require__(9593);
 const exlintCliToken = core.getInput('token', { required: true });
 const exlintGroupId = core.getInput('groupId', { required: true });
-const httpClient = new http_client_1.default.HttpClient('exlint-http-client');
+const httpClient = new http.HttpClient('exlint-http-client');
 const runExlint = async () => {
     core.info('Trying to authenticate Exlint with provided token');
     try {
@@ -75,12 +75,12 @@ const runExlint = async () => {
             password: exlintCliToken,
         };
         await netrc.save();
-        const exlintUseCommandExitCode = await exec_1.default.exec('npx', ['@exlint.io/cli', 'use', exlintGroupId]);
+        const exlintUseCommandExitCode = await exec.exec('npx', ['@exlint.io/cli', 'use', exlintGroupId]);
         if (exlintUseCommandExitCode === 1) {
             core.setFailed(chalk_1.default.bold.red('Exlint "use" command failed'));
             return;
         }
-        const exlintRunCommandExitCode = await exec_1.default.exec('npx', ['@exlint.io/cli', 'run']);
+        const exlintRunCommandExitCode = await exec.exec('npx', ['@exlint.io/cli', 'run']);
         if (exlintRunCommandExitCode === 1) {
             core.setFailed(chalk_1.default.bold.red('Exlint "run" command failed'));
             return;
