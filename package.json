@@ -29,7 +29,7 @@
 		"onboarding": "node ./scripts/onboarding.cjs",
 		"prepare": "is-ci || run-s setdev onboarding",
 		"dist": "tsc -p ./tsconfig.build.json",
-		"bundle": "ncc build ./dist/index.js -o ./build -m --source-map --license licenses.txt",
+		"bundle": "ncc build ./dist/index.js -o ./build --source-map --license licenses.txt",
 		"build": "run-s dist bundle",
 		"lint": "eslint -c ./.eslintrc.cjs \"**/*.{ts,js.cjs}\"",
 		"type-check": "tsc --project ./tsconfig.json",
