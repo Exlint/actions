@@ -1,6 +1,6 @@
 import * as core from '@actions/core';
-import exec from '@actions/exec';
-import http from '@actions/http-client';
+import * as exec from '@actions/exec';
+import * as http from '@actions/http-client';
 import chalk from 'chalk';
 import { Netrc } from 'netrc-parser';
 
