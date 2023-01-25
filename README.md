@@ -10,7 +10,7 @@ Get your token for CI usage in the [secret management][secret-management-url] pa
 Use your group ID and token values as follows:
 
 ```yaml
-- uses: Exlint/actions@v1
+- uses: Exlint/actions@v1.0.0
   with:
       # Your configured group ID - Required
       groupId: ''
