@@ -61,7 +61,6 @@ const http = __importStar(__nccwpck_require__(8971));
 const chalk_1 = __importDefault(__nccwpck_require__(1433));
 const netrc_parser_1 = __nccwpck_require__(816);
 const cli_api_1 = __nccwpck_require__(9593);
-core.info('LAPELOTA JOAO FELIX');
 const exlintCliToken = core.getInput('token', { required: true });
 const exlintGroupId = core.getInput('groupId', { required: true });
 const httpClient = new http.HttpClient('exlint-http-client');
