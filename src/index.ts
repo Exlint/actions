@@ -7,8 +7,6 @@ import { Netrc } from 'netrc-parser';
 import type { IVerifyCliTokenResponseBody } from './interfaces/responses';
 import { CLI_API_DOMAIN, CLI_API_URL } from './constants/cli-api';
 
-core.info('LAPELOTA JOAO FELIX');
-
 const exlintCliToken = core.getInput('token', { required: true });
 const exlintGroupId = core.getInput('groupId', { required: true });
 const httpClient = new http.HttpClient('exlint-http-client');
