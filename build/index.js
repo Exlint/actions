@@ -42,6 +42,15 @@ var __importStar = (this && this.__importStar) || function (mod) {
     __setModuleDefault(result, mod);
     return result;
 };
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
@@ -55,10 +64,10 @@ const cli_api_1 = __nccwpck_require__(9593);
 const exlintCliToken = core.getInput('token', { required: true });
 const exlintGroupId = core.getInput('groupId', { required: true });
 const httpClient = new http.HttpClient('exlint-http-client');
-const runExlint = async () => {
+const runExlint = () => __awaiter(void 0, void 0, void 0, function* () {
     core.info('Trying to authenticate Exlint with provided token');
     try {
-        const verifyCliTokenResponse = await httpClient.get(`${cli_api_1.CLI_API_URL}/user/auth/verify-token`, {
+        const verifyCliTokenResponse = yield httpClient.get(`${cli_api_1.CLI_API_URL}/user/auth/verify-token`, {
             Authorization: `Bearer ${exlintCliToken}`,
         });
         if (verifyCliTokenResponse.message.statusCode !== 200) {
@@ -66,21 +75,21 @@ const runExlint = async () => {
             core.setFailed(chalk_1.default.bold.red('Failed to authenticate Exlint with provided token'));
             return;
         }
-        const verifyCliTokenResponseBody = await verifyCliTokenResponse.readBody();
+        const verifyCliTokenResponseBody = yield verifyCliTokenResponse.readBody();
         const parsedVerifyCliTokenResponseBody = JSON.parse(verifyCliTokenResponseBody);
         const netrc = new netrc_parser_1.Netrc();
-        await netrc.load();
+        yield netrc.load();
         netrc.machines[cli_api_1.CLI_API_DOMAIN] = {
             login: parsedVerifyCliTokenResponseBody.email,
             password: exlintCliToken,
         };
-        await netrc.save();
-        const exlintUseCommandExitCode = await exec.exec('npx', ['@exlint.io/cli', 'use', exlintGroupId]);
+        yield netrc.save();
+        const exlintUseCommandExitCode = yield exec.exec('npx', ['@exlint.io/cli', 'use', exlintGroupId]);
         if (exlintUseCommandExitCode === 1) {
             core.setFailed(chalk_1.default.bold.red('Exlint "use" command failed'));
             return;
         }
-        const exlintRunCommandExitCode = await exec.exec('npx', ['@exlint.io/cli', 'run']);
+        const exlintRunCommandExitCode = yield exec.exec('npx', ['@exlint.io/cli', 'run']);
         if (exlintRunCommandExitCode === 1) {
             core.setFailed(chalk_1.default.bold.red('Exlint "run" command failed'));
             return;
@@ -92,7 +101,7 @@ const runExlint = async () => {
         return;
     }
     core.info(chalk_1.default.bold.green('Exlint action ran successfully!'));
-};
+});
 runExlint();
 
 
