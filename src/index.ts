@@ -70,7 +70,7 @@ const runExlint = async () => {
 		return;
 	}
 
-	core.info(chalk.bold.green('Exlint action ran successfully!'));
+	core.info(chalk.bold.green('Exlint action completed successfully!'));
 };
 
 runExlint();
