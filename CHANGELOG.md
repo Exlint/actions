@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/Exlint/actions/compare/v1.0.0...v1.0.1) (2023-01-26)
+
+
+### Bug Fixes
+
+* 🐞 replace http-client of GH with axios ([059435e](https://github.com/Exlint/actions/commit/059435ea19442324a32e49ce52e21a914ef234ae))
+
 # 1.0.0 (2023-01-25)
 
 
