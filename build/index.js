@@ -61,8 +61,8 @@ const chalk_1 = __importDefault(__nccwpck_require__(9348));
 const netrc_parser_1 = __nccwpck_require__(8687);
 const axios_1 = __importDefault(__nccwpck_require__(3847));
 const cli_api_1 = __nccwpck_require__(3771);
-const exlintCliToken = '77';
-const exlintGroupId = '99 dd';
+const exlintCliToken = core.getInput('token', { required: true });
+const exlintGroupId = core.getInput('groupId', { required: true });
 const runExlint = () => __awaiter(void 0, void 0, void 0, function* () {
     core.info('Trying to authenticate Exlint with provided token');
     let verifiedEmail;
