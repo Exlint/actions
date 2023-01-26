@@ -1,6 +1,6 @@
 {
 	"name": "exlint-action",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Runs and uses `exlint` in your repository.",
 	"main": "./build/index.js",
 	"repository": {
