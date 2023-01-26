@@ -1,48 +1,45 @@
 import * as core from '@actions/core';
 import * as exec from '@actions/exec';
-import * as http from '@actions/http-client';
 import chalk from 'chalk';
 import { Netrc } from 'netrc-parser';
+import axios from 'axios';
 
 import type { IVerifyCliTokenResponseBody } from './interfaces/responses';
 import { CLI_API_DOMAIN, CLI_API_URL } from './constants/cli-api';
 
-const exlintCliToken = core.getInput('token', { required: true });
-const exlintGroupId = core.getInput('groupId', { required: true });
-const httpClient = new http.HttpClient('exlint-http-client');
+const exlintCliToken = '77';
+const exlintGroupId = '99 dd';
 
 const runExlint = async () => {
 	core.info('Trying to authenticate Exlint with provided token');
 
+	let verifiedEmail: string;
+
 	try {
-		const verifyCliTokenResponse = await httpClient.get(`${CLI_API_URL}/user/auth/verify-token`, {
-			Authorization: `Bearer ${exlintCliToken}`,
-		});
+		const verifyCliTokenResponseData = await axios.get<IVerifyCliTokenResponseBody>(
+			`${CLI_API_URL}/user/auth/verify-token`,
+			{
+				headers: {
+					Authorization: `Bearer ${exlintCliToken}`,
+				},
+			},
+		);
 
-		if (verifyCliTokenResponse.message.statusCode !== 200) {
-			core.debug(
-				`Failed to authenticate Exlint with HTTP response:\n${JSON.stringify(
-					verifyCliTokenResponse,
-					null,
-					2,
-				)}`,
-			);
-			core.setFailed(chalk.bold.red('Failed to authenticate Exlint with provided token'));
+		verifiedEmail = verifyCliTokenResponseData.data.email;
+	} catch (e: unknown) {
+		core.debug(`Failed to authenticate Exlint with HTTP error:\n${JSON.stringify(e, null, 2)}`);
+		core.setFailed(chalk.bold.red('Failed to authenticate Exlint with provided token'));
 
-			return;
-		}
+		return;
+	}
 
-		const verifyCliTokenResponseBody = await verifyCliTokenResponse.readBody();
-
-		const parsedVerifyCliTokenResponseBody: IVerifyCliTokenResponseBody =
-			JSON.parse(verifyCliTokenResponseBody);
-
+	try {
 		const netrc = new Netrc();
 
 		await netrc.load();
 
 		netrc.machines[CLI_API_DOMAIN] = {
-			login: parsedVerifyCliTokenResponseBody.email,
+			login: verifiedEmail,
 			password: exlintCliToken,
 		};
 
