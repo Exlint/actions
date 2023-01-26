@@ -1,8 +1,8 @@
 import * as core from '@actions/core';
 import * as exec from '@actions/exec';
+import axios from 'axios';
 import chalk from 'chalk';
 import { Netrc } from 'netrc-parser';
-import axios from 'axios';
 
 import type { IVerifyCliTokenResponseBody } from './interfaces/responses';
 import { CLI_API_DOMAIN, CLI_API_URL } from './constants/cli-api';
