@@ -7,8 +7,8 @@ import axios from 'axios';
 import type { IVerifyCliTokenResponseBody } from './interfaces/responses';
 import { CLI_API_DOMAIN, CLI_API_URL } from './constants/cli-api';
 
-const exlintCliToken = '77';
-const exlintGroupId = '99 dd';
+const exlintCliToken = core.getInput('token', { required: true });
+const exlintGroupId = core.getInput('groupId', { required: true });
 
 const runExlint = async () => {
 	core.info('Trying to authenticate Exlint with provided token');
