@@ -57,9 +57,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const core = __importStar(__nccwpck_require__(7733));
 const exec = __importStar(__nccwpck_require__(1757));
-const chalk_1 = __importDefault(__nccwpck_require__(9348));
-const netrc_parser_1 = __nccwpck_require__(8687);
 const axios_1 = __importDefault(__nccwpck_require__(3847));
+const netrc_parser_1 = __nccwpck_require__(8687);
+const chalk_1 = __importDefault(__nccwpck_require__(9348));
 const cli_api_1 = __nccwpck_require__(3771);
 const exlintCliToken = core.getInput('token', { required: true });
 const exlintGroupId = core.getInput('groupId', { required: true });
