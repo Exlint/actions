@@ -57,7 +57,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const core = __importStar(__nccwpck_require__(7733));
 const exec = __importStar(__nccwpck_require__(1757));
-const axios_1 = __importDefault(__nccwpck_require__(9104));
+const axios_1 = __importDefault(__nccwpck_require__(3926));
 const netrc_parser_1 = __nccwpck_require__(8687);
 const chalk_1 = __importDefault(__nccwpck_require__(9348));
 const cli_api_1 = __nccwpck_require__(3771);
@@ -13811,11 +13811,11 @@ module.exports = require("zlib");
 
 /***/ }),
 
-/***/ 9104:
+/***/ 3926:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
-// Axios v1.2.5 Copyright (c) 2023 Matt Zabriskie and contributors
+// Axios v1.2.6 Copyright (c) 2023 Matt Zabriskie and contributors
 
 
 const FormData$1 = __nccwpck_require__(6872);
@@ -15606,7 +15606,7 @@ class AxiosHeaders {
   }
 }
 
-AxiosHeaders.accessor(['Content-Type', 'Content-Length', 'Accept', 'Accept-Encoding', 'User-Agent']);
+AxiosHeaders.accessor(['Content-Type', 'Content-Length', 'Accept', 'Accept-Encoding', 'User-Agent', 'Authorization']);
 
 utils.freezeMethods(AxiosHeaders.prototype);
 utils.freezeMethods(AxiosHeaders);
@@ -15728,7 +15728,7 @@ function buildFullPath(baseURL, requestedURL) {
   return requestedURL;
 }
 
-const VERSION = "1.2.5";
+const VERSION = "1.2.6";
 
 function parseProtocol(url) {
   const match = /^([-+\w]{1,25})(:?\/\/|:)/.exec(url);
