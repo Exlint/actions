@@ -20,7 +20,7 @@ jobs:
 
         steps:
             - name: Setup Node environment
-              uses: Exlint/node-environment@v1.1.0
+              uses: Exlint/node-environment@v1.2.1
               with:
                   node-version: 18
                   package-manager: pnpm
@@ -36,7 +36,7 @@ jobs:
 
         steps:
             - name: Setup Node environment
-              uses: Exlint/node-environment@v1.1.0
+              uses: Exlint/node-environment@v1.2.1
               with:
                   node-version: 18
                   package-manager: pnpm
@@ -52,7 +52,7 @@ jobs:
 
         steps:
             - name: Setup Node environment
-              uses: Exlint/node-environment@v1.1.0
+              uses: Exlint/node-environment@v1.2.1
               with:
                   node-version: 18
                   package-manager: pnpm
@@ -68,7 +68,7 @@ jobs:
 
         steps:
             - name: Setup Node environment
-              uses: Exlint/node-environment@v1.1.0
+              uses: Exlint/node-environment@v1.2.1
               with:
                   node-version: 18
                   package-manager: pnpm
@@ -84,7 +84,7 @@ jobs:
 
         steps:
             - name: Setup Node environment
-              uses: Exlint/node-environment@v1.1.0
+              uses: Exlint/node-environment@v1.2.1
               with:
                   node-version: 18
                   package-manager: pnpm
@@ -100,7 +100,7 @@ jobs:
 
         steps:
             - name: Setup Node environment
-              uses: Exlint/node-environment@v1.1.0
+              uses: Exlint/node-environment@v1.2.1
               with:
                   node-version: 18
                   package-manager: pnpm
