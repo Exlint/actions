@@ -57,7 +57,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const core = __importStar(__nccwpck_require__(7733));
 const exec = __importStar(__nccwpck_require__(1757));
-const axios_1 = __importDefault(__nccwpck_require__(3858));
+const axios_1 = __importDefault(__nccwpck_require__(7862));
 const netrc_parser_1 = __nccwpck_require__(8687);
 const chalk_1 = __importDefault(__nccwpck_require__(9348));
 const cli_api_1 = __nccwpck_require__(3771);
@@ -13811,11 +13811,11 @@ module.exports = require("zlib");
 
 /***/ }),
 
-/***/ 3858:
+/***/ 7862:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
-// Axios v1.3.1 Copyright (c) 2023 Matt Zabriskie and contributors
+// Axios v1.3.2 Copyright (c) 2023 Matt Zabriskie and contributors
 
 
 const FormData$1 = __nccwpck_require__(6872);
@@ -15765,7 +15765,7 @@ function buildFullPath(baseURL, requestedURL) {
   return requestedURL;
 }
 
-const VERSION = "1.3.1";
+const VERSION = "1.3.2";
 
 function parseProtocol(url) {
   const match = /^([-+\w]{1,25})(:?\/\/|:)/.exec(url);
@@ -16105,7 +16105,7 @@ const readBlob$1 = readBlob;
 
 const BOUNDARY_ALPHABET = utils.ALPHABET.ALPHA_DIGIT + '-_';
 
-const textEncoder = new TextEncoder();
+const textEncoder = new util.TextEncoder();
 
 const CRLF = '\r\n';
 const CRLF_BYTES = textEncoder.encode(CRLF);
@@ -16394,7 +16394,7 @@ const httpAdapter = isHttpAdapterSupported && function httpAdapter(config) {
 
     // Parse url
     const fullPath = buildFullPath(config.baseURL, config.url);
-    const parsed = new URL(fullPath);
+    const parsed = new URL(fullPath, 'http://localhost');
     const protocol = parsed.protocol || supportedProtocols[0];
 
     if (protocol === 'data:') {
