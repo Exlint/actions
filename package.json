@@ -45,7 +45,7 @@
 		"netrc-parser": "3.1.6"
 	},
 	"devDependencies": {
-		"@commitlint/cli": "17.4.2",
+		"@commitlint/cli": "17.4.3",
 		"@exlint.io/inflint": "1.2.10",
 		"@types/node": "18.13.0",
 		"@typescript-eslint/eslint-plugin": "5.51.0",
