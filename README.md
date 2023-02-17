@@ -10,7 +10,7 @@ Get your token for CI usage in the [secret management][secret-management-url] pa
 Use your compliance ID and token values as follows:
 
 ```yaml
-- uses: Exlint/actions@v1.0.0
+- uses: Exlint/actions@v1.0.1
   with:
       # Your configured compliance ID - Required
       complianceId: ''
