@@ -4,16 +4,16 @@ GitHub Action for using [Exlint CLI][exlint-cli-repo-url] and [Exlint applicatio
 
 ## Usage
 
-To integrate Exlint into your CI, you must have a token and a group configured.
-Go to [app.exlint.io][exlint-app-url] and set your group, and then copy the group ID.
+To integrate Exlint into your CI, you must have a token and a compliance configured.
+Go to [app.exlint.io][exlint-app-url] and set your compliance, and then copy the compliance ID.
 Get your token for CI usage in the [secret management][secret-management-url] page.
-Use your group ID and token values as follows:
+Use your compliance ID and token values as follows:
 
 ```yaml
-- uses: Exlint/actions@v1.0.0
+- uses: Exlint/actions@v1.0.1
   with:
-      # Your configured group ID - Required
-      groupId: ''
+      # Your configured compliance ID - Required
+      complianceId: ''
 
       # Your token for CI - Required
       token: ''
