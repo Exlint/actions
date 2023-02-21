@@ -15,7 +15,7 @@ jobs:
             - name: Setup Node environment
               uses: Exlint/node-environment@v1.2.6
               with:
-                  node-version: 18.14.1
+                  node-version: 18.14.2
                   package-manager: pnpm
                   package-manager-version: 7.27.1
 
