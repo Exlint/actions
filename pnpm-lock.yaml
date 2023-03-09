@@ -27,7 +27,7 @@ specifiers:
   netrc-parser: 3.1.6
   npm-run-all: 4.1.5
   prettier: 2.8.4
-  rimraf: 4.3.1
+  rimraf: 4.4.0
   ts-loader: 9.4.2
   ts-node: 10.9.1
   typescript: 4.9.5
@@ -61,7 +61,7 @@ devDependencies:
   lint-staged: 13.1.2
   npm-run-all: 4.1.5
   prettier: 2.8.4
-  rimraf: 4.3.1
+  rimraf: 4.4.0
   ts-loader: 9.4.2_typescript@4.9.5
   ts-node: 10.9.1_alpjt73dvgv6kni625hu7f2l4m
   typescript: 4.9.5
@@ -3740,8 +3740,8 @@ packages:
       glob: 7.2.3
     dev: true
 
-  /rimraf/4.3.1:
-    resolution: {integrity: sha512-GfHJHBzFQra23IxDzIdBqhOWfbtdgS1/dCHrDy+yvhpoJY5TdwdT28oWaHWfRpKFDLd3GZnGTx6Mlt4+anbsxQ==}
+  /rimraf/4.4.0:
+    resolution: {integrity: sha512-X36S+qpCUR0HjXlkDe4NAOhS//aHH0Z+h8Ckf2auGJk3PTnx5rLmrHkwNdbVQuCSUhOyFrlRvFEllZOYE+yZGQ==}
     engines: {node: '>=14'}
     hasBin: true
     dependencies:
