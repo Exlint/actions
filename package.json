@@ -47,7 +47,7 @@
 	"devDependencies": {
 		"@commitlint/cli": "17.4.4",
 		"@exlint.io/inflint": "1.2.10",
-		"@types/node": "18.15.3",
+		"@types/node": "18.15.5",
 		"@typescript-eslint/eslint-plugin": "5.56.0",
 		"@typescript-eslint/parser": "5.56.0",
 		"@vercel/ncc": "0.36.1",
