@@ -85,8 +85,8 @@ devDependencies:
     specifier: 4.4.1
     version: 4.4.1
   ts-loader:
-    specifier: 9.4.2
-    version: 9.4.2(typescript@4.9.5)(webpack@5.76.3)
+    specifier: 9.4.3
+    version: 9.4.3(typescript@4.9.5)(webpack@5.76.3)
   ts-node:
     specifier: 10.9.1
     version: 10.9.1(@types/node@18.16.14)(typescript@4.9.5)
@@ -4691,8 +4691,8 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /ts-loader@9.4.2(typescript@4.9.5)(webpack@5.76.3):
-    resolution: {integrity: sha512-OmlC4WVmFv5I0PpaxYb+qGeGOdm5giHU7HwDDUjw59emP2UYMHy9fFSDcYgSNoH8sXcj4hGCSEhlDZ9ULeDraA==}
+  /ts-loader@9.4.3(typescript@4.9.5)(webpack@5.76.3):
+    resolution: {integrity: sha512-n3hBnm6ozJYzwiwt5YRiJZkzktftRpMiBApHaJPoWLA+qetQBAXkHqCLM6nwSdRDimqVtA5ocIkcTRLMTt7yzA==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
       typescript: '*'
@@ -4701,7 +4701,7 @@ packages:
       chalk: 4.1.2
       enhanced-resolve: 5.10.0
       micromatch: 4.0.5
-      semver: 7.3.7
+      semver: 7.5.0
       typescript: 4.9.5
       webpack: 5.76.3
     dev: true
