@@ -1,4 +1,8 @@
-lockfileVersion: '6.0'
+lockfileVersion: '6.1'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
 
 dependencies:
   '@actions/core':
@@ -22,8 +26,8 @@ devDependencies:
     specifier: 17.6.3
     version: 17.6.3
   '@exlint.io/inflint':
-    specifier: 1.2.10
-    version: 1.2.10(@types/node@18.16.16)(typescript@4.9.5)
+    specifier: 1.2.11
+    version: 1.2.11
   '@types/node':
     specifier: 18.16.16
     version: 18.16.16
@@ -441,24 +445,18 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
-  /@exlint.io/inflint@1.2.10(@types/node@18.16.16)(typescript@4.9.5):
-    resolution: {integrity: sha512-w/WF8km72qi6PqRCoyr4w7tFmE2RLSD1+0rq2joZKSubFAepcg52mqvQzdln/E4j4nADBNCKMlPxl8IRnV6asA==}
+  /@exlint.io/inflint@1.2.11:
+    resolution: {integrity: sha512-NbUJuno2nkHOOidoV5CgXb2xBOg2G5ivoTfDWXdo5FUpNzC3qKU1EWPii6ZlR5lVQYMAp7zVMqOxIHYKCm7Mtg==}
+    engines: {node: '>=14.16'}
     hasBin: true
     dependencies:
       '@expo/spawn-async': 1.6.0
+      chalk: 5.2.0
       cosmiconfig: 7.0.1
-      cosmiconfig-typescript-loader: 2.0.1(@types/node@18.16.16)(cosmiconfig@7.0.1)(typescript@4.9.5)
       fast-glob: 3.2.11
-      inquirer: 8.2.4
       micromatch: 4.0.5
       minimist: 1.2.6
       v8-compile-cache: 2.3.0
-      yaml: 2.1.1
-    transitivePeerDependencies:
-      - '@swc/core'
-      - '@swc/wasm'
-      - '@types/node'
-      - typescript
     dev: true
 
   /@expo/spawn-async@1.6.0:
@@ -5028,11 +5026,6 @@ packages:
   /yaml@1.10.2:
     resolution: {integrity: sha512-r3vXyErRCYJ7wg28yvBY5VSoAF8ZvlcW9/BwUzEtUsjvX/DKs24dIkuwjtuprwJJHsbyUbLApepYTR1BN4uHrg==}
     engines: {node: '>= 6'}
-    dev: true
-
-  /yaml@2.1.1:
-    resolution: {integrity: sha512-o96x3OPo8GjWeSLF+wOAbrPfhFOGY0W00GNaxCDv+9hkcDJEnev1yh8S7pgHF0ik6zc8sQLuL8hjHjJULZp8bw==}
-    engines: {node: '>= 14'}
     dev: true
 
   /yaml@2.2.2:
