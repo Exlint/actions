@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 dependencies:
   '@actions/core':
     specifier: 1.10.0
@@ -22,8 +26,8 @@ devDependencies:
     specifier: 17.6.3
     version: 17.6.3
   '@exlint.io/inflint':
-    specifier: 1.2.10
-    version: 1.2.10(@types/node@18.16.16)(typescript@4.9.5)
+    specifier: 2.1.1
+    version: 2.1.1(@types/node@18.16.16)(typescript@4.9.5)
   '@types/node':
     specifier: 18.16.16
     version: 18.16.16
@@ -441,28 +445,26 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
-  /@exlint.io/inflint@1.2.10(@types/node@18.16.16)(typescript@4.9.5):
-    resolution: {integrity: sha512-w/WF8km72qi6PqRCoyr4w7tFmE2RLSD1+0rq2joZKSubFAepcg52mqvQzdln/E4j4nADBNCKMlPxl8IRnV6asA==}
+  /@exlint.io/inflint@2.1.1(@types/node@18.16.16)(typescript@4.9.5):
+    resolution: {integrity: sha512-sWgdh7iv2CR8EuqirZbtndooLPjIysOyZ0ojpK3F9o3hnceCVi8JDxYBHveZPXiBol5ivccH8KyoXO6empktmw==}
+    engines: {node: '>=14.16'}
     hasBin: true
     dependencies:
-      '@expo/spawn-async': 1.6.0
-      cosmiconfig: 7.0.1
-      cosmiconfig-typescript-loader: 2.0.1(@types/node@18.16.16)(cosmiconfig@7.0.1)(typescript@4.9.5)
-      fast-glob: 3.2.11
-      inquirer: 8.2.4
+      '@expo/spawn-async': 1.7.2
+      chalk: 5.3.0
+      cosmiconfig: 8.3.6(typescript@4.9.5)
+      cosmiconfig-typescript-loader: 5.0.0(@types/node@18.16.16)(cosmiconfig@8.3.6)(typescript@4.9.5)
+      fast-glob: 3.3.1
       micromatch: 4.0.5
-      minimist: 1.2.6
-      v8-compile-cache: 2.3.0
-      yaml: 2.1.1
+      minimist: 1.2.8
+      v8-compile-cache: 2.4.0
     transitivePeerDependencies:
-      - '@swc/core'
-      - '@swc/wasm'
       - '@types/node'
       - typescript
     dev: true
 
-  /@expo/spawn-async@1.6.0:
-    resolution: {integrity: sha512-CynFS2y9S0OXgoBN3o6qvLSD5tBXCxEQnbByIleEocbKKYKb+/gjrjxYVvxPY8G+zqe82xG6IcmHbJoPl5g1WA==}
+  /@expo/spawn-async@1.7.2:
+    resolution: {integrity: sha512-QdWi16+CHB9JYP7gma19OVVg0BFkvU8zNj9GjWorYI8Iv8FUxjOCcYRuAmX4s/h91e4e7BPsskc8cSrZYho9Ew==}
     engines: {node: '>=12'}
     dependencies:
       cross-spawn: 7.0.3
@@ -1333,6 +1335,11 @@ packages:
     engines: {node: ^12.17.0 || ^14.13 || >=16.0.0}
     dev: true
 
+  /chalk@5.3.0:
+    resolution: {integrity: sha512-dLitG79d+GV1Nb/VYcCDFivJeK1hiukt9QjRNVOsUtTy1rR1YJsmpGGTZ3qJos+uw7WmWF4wUwBd9jxjocFC2w==}
+    engines: {node: ^12.17.0 || ^14.13 || >=16.0.0}
+    dev: true
+
   /chardet@0.4.2:
     resolution: {integrity: sha512-j/Toj7f1z98Hh2cYo2BVr85EpIRWqUi7rtRSGxh/cqUjqrnJe9l9UE7IUGd2vQ2p+kSHLkSzObQPZPLUC6TQwg==}
     dev: true
@@ -1558,6 +1565,20 @@ packages:
       typescript: 4.9.5
     dev: true
 
+  /cosmiconfig-typescript-loader@5.0.0(@types/node@18.16.16)(cosmiconfig@8.3.6)(typescript@4.9.5):
+    resolution: {integrity: sha512-+8cK7jRAReYkMwMiG+bxhcNKiHJDM6bR9FD/nGBXOWdMLuYawjF5cGrtLilJ+LGd3ZjCXnJjR5DkfWPoIVlqJA==}
+    engines: {node: '>=v16'}
+    peerDependencies:
+      '@types/node': '*'
+      cosmiconfig: '>=8.2'
+      typescript: '>=4'
+    dependencies:
+      '@types/node': 18.16.16
+      cosmiconfig: 8.3.6(typescript@4.9.5)
+      jiti: 1.21.0
+      typescript: 4.9.5
+    dev: true
+
   /cosmiconfig@7.0.1:
     resolution: {integrity: sha512-a1YWNUV2HwGimB7dU2s1wUMurNKjpx60HxBB6xUM8Re+2s1g1IIfJvFR0/iCF+XHdE0GMTKTuLR32UQff4TEyQ==}
     engines: {node: '>=10'}
@@ -1577,6 +1598,22 @@ packages:
       js-yaml: 4.1.0
       parse-json: 5.2.0
       path-type: 4.0.0
+    dev: true
+
+  /cosmiconfig@8.3.6(typescript@4.9.5):
+    resolution: {integrity: sha512-kcZ6+W5QzcJ3P1Mt+83OUv/oHFqZHIx8DuxG6eZ5RGMERoLqp4BuGjhHLYGK+Kf5XVkQvqBSmAy/nGWN3qDgEA==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      typescript: '>=4.9.5'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+    dependencies:
+      import-fresh: 3.3.0
+      js-yaml: 4.1.0
+      parse-json: 5.2.0
+      path-type: 4.0.0
+      typescript: 4.9.5
     dev: true
 
   /create-require@1.1.1:
@@ -2468,6 +2505,17 @@ packages:
       micromatch: 4.0.5
     dev: true
 
+  /fast-glob@3.3.1:
+    resolution: {integrity: sha512-kNFPyjhh5cKjrUltxs+wFx+ZkbRaxxmZ+X0ZU31SOsxCEtP9VPgtq2teZw1DebupL5GmDaNQ6yKMMVcM41iqDg==}
+    engines: {node: '>=8.6.0'}
+    dependencies:
+      '@nodelib/fs.stat': 2.0.5
+      '@nodelib/fs.walk': 1.2.8
+      glob-parent: 5.1.2
+      merge2: 1.4.1
+      micromatch: 4.0.5
+    dev: true
+
   /fast-json-stable-stringify@2.1.0:
     resolution: {integrity: sha512-lhd/wF+Lk98HZoTCtlVraHtfh5XYijIjalXck7saUtuanSDyLMxnHhSXEDJqHxD7msR8D0uCmqlkwjCV8xvwHw==}
     dev: true
@@ -3259,6 +3307,11 @@ packages:
       supports-color: 8.1.1
     dev: true
 
+  /jiti@1.21.0:
+    resolution: {integrity: sha512-gFqAIbuKyyso/3G2qhiO2OM6shY6EPP/R0+mkDbyspxKazh8BXDC5FiFsUjlczgdNz/vfra0da2y+aHrusLG/Q==}
+    hasBin: true
+    dev: true
+
   /js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
     dev: true
@@ -3636,12 +3689,12 @@ packages:
       kind-of: 6.0.3
     dev: true
 
-  /minimist@1.2.6:
-    resolution: {integrity: sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==}
-    dev: true
-
   /minimist@1.2.7:
     resolution: {integrity: sha512-bzfL1YUZsP41gmu/qjrEk0Q6i2ix/cVeAhbCbqH9u3zYutS1cLg00qhrD0M2MVdCcx4Sc0UpP2eBWo9rotpq6g==}
+    dev: true
+
+  /minimist@1.2.8:
+    resolution: {integrity: sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==}
     dev: true
 
   /minipass@4.2.4:
@@ -4859,8 +4912,8 @@ packages:
     resolution: {integrity: sha512-wa7YjyUGfNZngI/vtK0UHAN+lgDCxBPCylVXGp0zu59Fz5aiGtNXaq3DhIov063MorB+VfufLh3JlF2KdTK3xg==}
     dev: true
 
-  /v8-compile-cache@2.3.0:
-    resolution: {integrity: sha512-l8lCEmLcLYZh4nbunNZvQCJc5pv7+RCwa8q/LdUx8u7lsWvPDKmpodJAJNwkAhJC//dFY48KuIEmjtd4RViDrA==}
+  /v8-compile-cache@2.4.0:
+    resolution: {integrity: sha512-ocyWc3bAHBB/guyqJQVI5o4BZkPhznPYUG2ea80Gond/BgNWpap8TOmLSeeQG7bnh2KMISxskdADG59j7zruhw==}
     dev: true
 
   /validate-npm-package-license@3.0.4:
@@ -5028,11 +5081,6 @@ packages:
   /yaml@1.10.2:
     resolution: {integrity: sha512-r3vXyErRCYJ7wg28yvBY5VSoAF8ZvlcW9/BwUzEtUsjvX/DKs24dIkuwjtuprwJJHsbyUbLApepYTR1BN4uHrg==}
     engines: {node: '>= 6'}
-    dev: true
-
-  /yaml@2.1.1:
-    resolution: {integrity: sha512-o96x3OPo8GjWeSLF+wOAbrPfhFOGY0W00GNaxCDv+9hkcDJEnev1yh8S7pgHF0ik6zc8sQLuL8hjHjJULZp8bw==}
-    engines: {node: '>= 14'}
     dev: true
 
   /yaml@2.2.2:
