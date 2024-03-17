@@ -17,7 +17,7 @@ jobs:
               with:
                   node-version: 18.16.0
                   package-manager: pnpm
-                  package-manager-version: 7.33.0
+                  package-manager-version: 8.15.5
 
             - name: Create build folder
               run: pnpm build
